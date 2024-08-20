@@ -6,7 +6,6 @@ import NucampLogo from './app/assets/img/logo.png';
 function App() {
   return (
     <div className="App">
-      hello nucamp!
       <Navbar dark color='primary' sticky='top' expand='md'>
         <Container>
           <NavbarBrand href='/'>
