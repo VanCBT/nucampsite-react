@@ -1,6 +1,6 @@
 import { Col, Row } from 'reactstrap';
 import CampsiteCard from "./CampsiteCard";
-import { selectAllCompanies } from './campsitesSlice';
+import { selectAllCampsites } from './campsitesSlice';
 
 const CampsitesList = () => {
     const campsites = selectAllCampsites();
