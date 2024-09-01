@@ -6,7 +6,7 @@ import PartnersList from '../../src/features/partners/PartnersList';
 const AboutPage = () => {
     return (
         <Container>
-            <SubHeader>About Us</SubHeader>
+            <SubHeader current="About Us" />
             <Row className='row-content'>
                 <Col sm='6'>
                     <h3>Our Mission</h3>
@@ -19,7 +19,7 @@ const AboutPage = () => {
                         also present a platform for campers to share reviews on
                         campsites they have visited with each other.</p>
                 </Col>
-                <Col>
+                <Col sm='6'>
                     <Card>
                         <CardHeader className='bg-primary text-white'>
                             <h3>Facts at a Glance</h3>
