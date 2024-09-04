@@ -4,7 +4,7 @@ export const selectAllPartners = () => {
     return PARTNERS;
 };
 
-export const selectFeaturePartner = () => {
+export const selectFeaturedPartner = () => {
     return PARTNERS.find((partner) => partner.featured);
 }
 
