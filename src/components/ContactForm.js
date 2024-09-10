@@ -1,6 +1,6 @@
 import { Button, Label, Col, FormGroup } from 'reactstrap';
-import { Formik, Field, Form } from 'formik';
-import {validateContactForm} from '../utils/formatDate'
+import { Formik, Field, Form,ErrorMessage } from 'formik';
+import {validateContactForm} from '../utils/validateContactForm';
 
 
 
@@ -14,7 +14,6 @@ const ContactForm = () => {
 
     return (
         <Formik
-            onSubmit={handleSubmit}
             initialValues={{
                 firstName: '',
                 lastName: '',
