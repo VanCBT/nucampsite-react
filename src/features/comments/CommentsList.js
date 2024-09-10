@@ -1,5 +1,6 @@
 import { Col } from 'reactstrap';
 import Comment from './Comment';
+import CommentForm from './CommentForm';
 import { selectCommentsByCampsiteId } from './commentsSlice';
 
 const CommentsList = ({ campsiteId }) => {
@@ -18,8 +19,10 @@ const CommentsList = ({ campsiteId }) => {
     return (
         <Col md='5' className='m-1'>
             There are no comments for this campsite yet.
+            <CommentForm campsiteId={campsiteId} />
         </Col>
     )
+    
 };
 
 export default CommentsList;
