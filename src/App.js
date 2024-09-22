@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchCampsites } from './features/campsites/campsitesSlice.js';
 import { Routes, Route } from 'react-router-dom';
 import ContactPage from './pages/ContactPage.js';
 import HomePage from './pages/HomePage.js';
@@ -10,6 +13,10 @@ import AboutPage from './pages/AboutPage.js';
 
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCampsites());
+  }, [dispatch]);
   return (
     <div className='App'>
       <Header />
