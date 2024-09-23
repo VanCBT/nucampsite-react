@@ -1,3 +1,5 @@
+//import Error from '../../components/Error';
+//import Loading from '../../components/Loading';
 import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
 //import DisplayCard from './DisplayCard';

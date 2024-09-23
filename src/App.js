@@ -1,3 +1,4 @@
+import { fetchPartners } from './features/partners/partnersSlice.js';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
@@ -17,8 +18,9 @@ function App() {
   
   useEffect(() => {
     dispatch(fetchCampsites());
+    dispatch(fetchPartners());
   }, [dispatch]);
-  
+
   return (
     <div className='App'>
       <Header />
