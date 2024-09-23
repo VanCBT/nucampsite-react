@@ -1,3 +1,4 @@
+import { fetchComments } from './features/comments/commentsSlice.js';
 import { fetchPromotions } from './features/promotions/promotionsSlice.js';
 import { fetchPartners } from './features/partners/partnersSlice.js';
 import { useEffect } from 'react';
@@ -21,6 +22,7 @@ function App() {
     dispatch(fetchCampsites());
     dispatch(fetchPartners());
     dispatch(fetchPromotions());
+    dispatch(fetchComments());
   }, [dispatch]);
 
   return (

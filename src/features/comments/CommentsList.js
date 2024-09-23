@@ -1,3 +1,5 @@
+import Loading from '../../components/Loading';
+import Error from '../../components/Error';
 import { useSelector } from 'react-redux';
 import { Col } from 'reactstrap';
 import Comment from './Comment';
@@ -7,7 +9,15 @@ import { selectCommentsByCampsiteId } from './commentsSlice';
 const CommentsList = ({ campsiteId }) => {
     const comments = useSelector(selectCommentsByCampsiteId(campsiteId));
 
-    return (
+    const isLoading = useSelector((state) => state.comments.isLoading);
+    const errMsg = useSelector((state) =>  state.comments.errMsg);
+
+
+    return isLoading ? (
+        <Loading />
+    ) : errMsg ? (
+        <Error errMsg={errMsg}/>        
+    ) : (    
         <Col md='5' className='m-1'>
             <h4>Comments</h4>
             {/* Corrected the ternary operator syntax */}
